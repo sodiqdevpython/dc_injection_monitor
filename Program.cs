@@ -1,7 +1,6 @@
 ﻿using System;
 using dc_injection_monitor.Components;
 using dc_injection_monitor.Models;
-using Microsoft.Diagnostics.Tracing.Session;
 
 namespace dc_injection_monitor
 {
@@ -9,11 +8,6 @@ namespace dc_injection_monitor
     {
         static void Main()
         {
-            if (TraceEventSession.IsElevated() == false)
-            {
-                Console.WriteLine("Admin run bo'lishi kerak");
-                return;
-            }
 
             using (var mon = new DllMonitor(maxPerList: 2000))
             {

@@ -7,11 +7,11 @@ namespace dc_injection_monitor.Components
     {
         private static readonly string[] WhiteListFolders =
         {
-            @"C:\Windows\System32",
-            @"C:\Program Files",
-            @"C:\Program Files (x86)",
-            @"C:\Windows\",
-            @"C:\ProgramData"
+            //@"C:\Windows\System32",
+            //@"C:\Program Files",
+            //@"C:\Program Files (x86)",
+            //@"C:\Windows\",
+            //@"C:\ProgramData"
         };
 
         public static bool IsWhiteListed(string path)
