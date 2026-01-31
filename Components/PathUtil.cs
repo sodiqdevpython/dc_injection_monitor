@@ -50,11 +50,11 @@ namespace dc_injection_monitor.Components
             if (path.StartsWith(@"\\?\") || path.StartsWith(@"\??\"))
                 path = path.Substring(4);
 
-            if (path.StartsWith(@"\SystemRoot\", StringComparison.OrdinalIgnoreCase))
-            {
-                var systemRoot = Environment.GetEnvironmentVariable("SystemRoot") ?? @"C:\Windows";
-                path = Path.Combine(systemRoot, path.Substring(12));
-            }
+            //if (path.StartsWith(@"\SystemRoot\", StringComparison.OrdinalIgnoreCase))
+            //{
+            //    var systemRoot = Environment.GetEnvironmentVariable("SystemRoot") ?? @"C:\Windows";
+            //    path = Path.Combine(systemRoot, path.Substring(12));
+            //}
 
             return path;
         }
